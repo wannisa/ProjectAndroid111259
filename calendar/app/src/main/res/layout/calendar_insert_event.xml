@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="กรุณาเลือกวันเริ่มต้นประจำเดือน"
+        android:ems="10"
+        android:layout_below="@+id/textView5"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="86dp"
+        android:layout_marginTop="70dp"
+        android:id="@+id/startdate" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/calendaricon"
+        android:layout_marginStart="15dp"
+        android:id="@+id/imageView6"
+        android:layout_alignTop="@+id/startdate"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/calendaricon"
+        android:layout_alignTop="@+id/enddate"
+        android:layout_alignStart="@+id/imageView6"
+        android:id="@+id/imageView7" />
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="กรุณาเลือกวันสิ้นสุดประจำเดือน"
+        android:ems="10"
+        android:layout_marginTop="82dp"
+        android:id="@+id/enddate"
+        android:layout_below="@+id/startdate"
+        android:layout_alignStart="@+id/startdate" />
+
+    <Button
+        android:text="ยกเลิก"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="36dp"
+        android:onClick="onCancel"
+        android:id="@+id/button7"
+        style="@style/btn_color"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/button4"
+        android:layout_alignStart="@+id/button4" />
+
+    <TextView
+        android:text="คำนวณวันตกไข่"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView5"
+        android:layout_marginTop="88dp"
+        android:layout_marginStart="12dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/startdate" />
+
+    <Button
+        android:text="คำนวณวันตกไข่"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="92dp"
+        android:onClick="onSave"
+        style="@style/btn_color"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:id="@+id/button4"
+        android:layout_below="@+id/enddate"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>
